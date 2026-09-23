@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DEMO MCP — Connect your Roblox account</title>
+<style>body{margin:0;background:#0b0d10;color:#e8eaed;font:16px/1.6 -apple-system,system-ui,sans-serif}main{max-width:620px;margin:0 auto;padding:28px 20px 60px}h1{font-size:28px;margin:0 0 6px}.lead{color:#b6bcc7}.btn{display:block;text-align:center;background:#3355ff;color:#fff;text-decoration:none;font-weight:600;padding:15px;border-radius:12px;margin:22px 0}h2{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#8b93a1;margin:26px 0 6px}ul,ol{color:#c3c9d4;padding-left:20px}li{margin:6px 0}code{background:#161a22;padding:2px 5px;border-radius:5px;font-size:13px}footer{margin-top:28px;color:#6f7784;font-size:13px;line-height:1.7}a{color:#8fb0ff}</style>
+</head>
+<body><main>
+<h1>DEMO MCP</h1>
+<p class="lead">DEMO MCP is a private developer tool — a Model Context Protocol server with its own browser. Connect your own Roblox account so DEMO can read your profile through Roblox's official OAuth 2.0 APIs.</p>
+<a class="btn" href="https://demo-mcp.amidevz.workers.dev/oauth/roblox/start">Connect Roblox account</a>
+<a href="https://demo-mcp.amidevz.workers.dev/oauth/roblox/status">Check connection status</a>
+<h2>Signing in</h2>
+<ol>
+<li>"Connect Roblox account" opens <code>apis.roblox.com/oauth/v1/authorize</code>. Roblox hosts the whole sign-in and consent screen.</li>
+<li>You approve the scopes <code>openid</code> and <code>profile</code> only.</li>
+<li>Roblox returns you to DEMO, which shows the connected username and user id.</li>
+</ol>
+<h2>What DEMO does</h2>
+<ul>
+<li>Reads only your Roblox user id, username, display name and avatar.</li>
+<li>Never asks for your password or <code>.ROBLOSECURITY</code> cookie, and never scrapes roblox.com.</li>
+<li>Keeps tokens on the server, encrypted at rest (AES-256-GCM); never logged or shared.</li>
+<li>Disconnect any time — tokens are revoked at Roblox and the record is deleted.</li>
+</ul>
+<footer><p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p>
+<p>Private testing, max 10 accounts. 13+ only. Not affiliated with Roblox Corporation. Contact: github.com/Errordevz/demo-mcp</p></footer>
+</main></body></html>
